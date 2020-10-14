@@ -34,7 +34,7 @@ const questions = [
         type: "input",
         message: "Description of project",
         name: "description",
-        default: "description",
+        default: "Random description",
         validate: function(answer){
             if (answer.length < 1){
                 return console.log ("description required")
@@ -61,7 +61,7 @@ const questions = [
     {
         type: "list",
         message: "Choose a license for your project",
-        choices: [ "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "Boost Software License 1.0"],
+        choices: [ "GPLv3", "CERN", "MIT"],
         name: "license"
     }
 
@@ -84,7 +84,9 @@ async function init() {
     try {
         const userResponses = await inquirer.prompt(questions);
         console.log("Your responses: ", userResponses);
-           } catch (error) {
+        const markdown= generateMarkdown(userResponses);
+        await writeFileAsync("SampleReadMe.md", markdown);
+        }catch (error) {
                console.log(error);
            }
 };
