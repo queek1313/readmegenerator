@@ -12,4 +12,4 @@ This project will generate a basic read me file that can be used to describe you
 
 ## video demo of project
 
-![gif of generator](readmedemo.gif)
+![gif of generator](readmeDemo.gif)
