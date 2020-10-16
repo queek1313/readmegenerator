@@ -10,3 +10,6 @@ To run this file you will need to access the terminal or GitBash.  Then you will
 
 This project will generate a basic read me file that can be used to describe your project in some detail based on the questions asked by the prompt.
 
+## video demo of project
+
+![gif of generator](readmedemo.gif)
